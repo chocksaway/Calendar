@@ -1,27 +1,22 @@
 package com.chocksaway;
 
-import java.util.HashMap;
-import java.util.Map;
+import java.util.Arrays;
+import java.util.List;
 
-/**
- * Created by milesd on 10/12/2015.
- */
 public class Calendar {
-    private String id;
-    private String name;
-    Map<String, Calendar> cals;
+    private String content;
+    private List<String> strings;
 
-
-    public Calendar(String calId ) {
-        if (cals == null) {
-            cals = new HashMap<String, Calendar>();
-            this.id = calId;
-            cals.put(calId, this);
-        }
+    public Calendar(String content) {
+        this.content = content;
     }
 
 
-//    public List<String> getContent() {
-//        return Arrays.asList("sup1", "sup2", "sup3");
-//    }
+    public String getContent() {
+        return content;
+    }
+
+    public List<String> getStrings() {
+        return Arrays.asList("This is", "a", "test");
+    }
 }
